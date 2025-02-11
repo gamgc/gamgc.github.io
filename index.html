@@ -130,91 +130,101 @@
 <p><br /></p>
 <div class="row" id="intro">
   <div class="col-xs-12">
-    <h2>Challenge Overview</h2>
+    <h2>Workshop Overview</h2>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
 
-    TBA
-    <!--
+
     <p>
-      In the wake of the rapid advancements in generative model capabilities, the field of text-guided image generation and editing has seen unprecedented progress. This has resulted in the creation of images with unparalleled quality, aesthetics, and adherence to text guidance. Yet, a significant challenge remains: the absence of a universally-accepted, easily accessible benchmark for evaluating in-depth capabilities of the generated models. This issue stems from the lack of a comprehensive, large-scale evaluation dataset, standardized evaluation protocols, and the insufficiency of current automatic metrics.
+    This year, we are excited to host the 2nd GenAI Media Generation Challenge Workshop at CVPR 2025. Building on the success of last year's event, which focused on text-to-image and image editing tasks, we are expanding the challenge to include video generation.
     </p>
     <p>
-      We are proud to announce the launch of the GenAI Media Generation Challenge (MAGIC) that moves us towards addressing these issues. We host two challenge tracks: (1) text to image generation, and (2) text guided image editing, and will be providing the following set of data and resources:
+    We are proud to announce the launch of the 2nd GenAI Media Generation Challenge (MAGIC), featuring a media generation track and auto-evaluation track:
+      </p>
       <ul>
         <li>
-          Benchmark Datasets: diverse and comprehensive datasets will be released publicly for both tracks, ensuring that all participants have access to the same information and resources.
+          <b>Media Generation Festival:</b> For the first time, we are organizing a media generation festival with no restrictions on prompts. We would define a few different topics for which submitted media would compete in, and participants can submit their best videos for those specific topics. For each topic, we run a crowd sourced voting mechanism to determine the winners for each topic .
         </li>
         <li>
-          Evaluation Protocol: A standardized evaluation protocol and metrics will be established and shared with all participants. This metric will be designed keeping in mind the nuances and specifics of the tasks, ensuring fair and objective evaluation.
-        </li>
-        <li>
-          Human Annotations for all Submissions: Recognizing the importance of meticulous human oversight, we commit to offering the requisite human annotation resources as stipulated by the evaluation protocol for the duration of the competition.
-        </li>
-        <li>
-          Baselines: For aiding participants and setting a preliminary standard, baseline results will be shared.
-        </li>
-        <li>
-          Awards for top performing participants for different tracks and challenges.
+          <b>Auto Evaluation Challenge:</b> We are introducing an auto evaluation challenge for both text-to-image and text-to-video tasks. Participants can develop and submit their auto evaluation score for a preselect set of images and videos that we will provide and enter into the media generation festival track. Auto evaluation submissions would be to predict the outcomes from the crowd sourced voting mechanism in the media generation festival  The auto evaluation method that achieves the best correlation with the final results would be the winners for this challenge..
         </li>
       </ul>
     </p>
-    <p>
-      In addition to the benchmark dataset, after the challenge, we will be releasing all human annotations for all submissions for the participants. This hopefully would be a contribution to the community for future evaluation tooling development.
-    </p>
-
-    -->
 
     <p><br /></p>
-    <h3>Tracks Overview</h3>
-    TBA
+    <h2> Challenges Overview </h2>
 
-      <!--
-    <H4>Track A - Text-to-image Generation</H4>
-      <H5>Benchmarking Datasets </H5>
+    <H4>Challenge A -  Media Generation Festival</H4>
+      <H5>Track A.1 - Video (Short)</H5>
       <p>
-        For this track, we test the model's text to image generation capabilities using benchmark prompts with different scenarios and complexity.
-        Benchmark prompts will be leveraging existing academic benchmarks and newly constructed prompts which expands to different levels of complexity. We aim to test different scenarios as below with different benchmark prompts:
+        For this task, there are no restrictions on prompts or models but limited to based on topics. Participants are free to use any models, including third-party video generation tools, and are encouraged to design their own creative prompts to produce engaging videos. Submissions can be single topic submissions or multiple topic submissions. However, the video length is limited to a maximum of 10 seconds.
+      </p>
+      <p>
+        For this track, we will have the following set of of topics:
+      </p>
       <ol>
         <li>
-          Single object generation, focusing on generation accuracy and correctness of the object
+          People
         </li>
         <li>
-          Object composition, focusing on generation along with relationship and activity
+          Animals
         </li>
         <li>
-          Reasoning, focusing on concepts such as counting or logic
-        </li>
-        <li>
-          Stylization, focusing on correctness of global style
-        </li>
-        <li>
-          Rendered text, focusing on quality and correctness of the generated text in image.
-        </li>
+          Landscape
         </li>
       </ol>
+
+      <H5>Track A.2 - Video (Long)</H5>
+      <p>
+        Similar to track A.1, there are no restrictions on prompts or models but limited to based on topics. For this track though, the video length is limited to a maximum of 5 minutes.
       </p>
       <p>
-      Within these scenarios, the benchmark prompts would contain topics from various domains.
-      For example, for single object generation, there prompts looking at generation of people, animals, food, and locations.
+        For this track, we will have the following set of of topics:
       </p>
+      <ol>
+        <li>
+          Action
+        </li>
+        <li>
+          History
+        </li>
+        <li>
+          Sci-Fi
+        </li>
+        <li>
+          Fantasy
+        </li>
+        <li>
+          Comedy
+        </li>
+      </ol>
+
+      <H5>Track A.3 - Images</H5>
+      <p>
+        For this task, there are no restrictions on prompts or models but limited to based on topics. Participants are free to use any models, including third-party video generation tools, and are encouraged to design their own creative prompts to produce engaging videos.
+      </p>
+      <p>
+        For this track, we will have the following set of of topics:
+      </p>
+      <ol>
+        <li>
+          People
+        </li>
+        <li>
+          Animals
+        </li>
+        <li>
+          Landscape
+        </li>
+      </ol>
 
       <H5>Evaluation Protocol</H5>
 
 
       <p>
-        We leverage both human and automated evaluations.
-        On human-based evaluations, we use human annotators to annotate the of the text2Image model performance on the following aspects:
-        <ol>
-          <li>Text Faithfulness - whether the visual elements in prompts such as objects, attributes,
-            interactions are accurately generated in the image. </li>
-          <li>Visual quality - whether there are visual errors/defects in the generated image. Examples of errors/defects
-            include misplaced body parts for people, unrealistic scale, bad arrangement, or blurry.</li>
-          <li>Visual appeal - whether the generated images are aesthetically pleasing to view. We judge whether models are either
-            on-par or surpass professionally made ones in terms of abundant visual details, color harmony, and composition.</li>
-        </ol>
+        All submitted video/images will be uploaded to our crowdsourcing platform for public voting. The top three submissions with the highest votes for each topic will be declared winners. Beyond the winners per topic, we also have joint submission winners where we would have the best overall performing solution. We would use the Elo ranking system to compute the final ranking between different models.
       </p>
 
       <p>
@@ -223,70 +233,41 @@
       </p>
 
       <p>
-        To determine winners, we use automatic evaluation to help prune the total number entries to 10 finalists. Within the final 10 participants, we would use human evaluation results to determine the final winners.
+        For the voting setup, we would use a pairwise comparison setup, showing two videos or images along with the topic, and ask the question "Which one would you prefer?". The selections would be 3-scale win/tie/lose rating.
       </p>
 
-    <H4>Track B - Text-guided Image Editing</H4>
+    <H4>Challenge B -  Results Prediction with Auto Evaluation</H4>
 
-      <H5>Benchmarking Dataset</H5>
+    In this challenge, we will use provided (text, image) pairs and (text, video) pairs for which participants would run their own auto evaluation metrics on. Participants will submit scores of these media which can be used to rank different media, or simply provide a ranking of all the videos in their submission.
+
+      <H5>Track B.1 -  Video Generation Auto Eval </H5>
       <p>
-        For text guided image editing, we test the capacity of the model to change a given
-        image's contents based on some text instructions. The specific type of instructions   that we test for are the following:
-        <ol>
-          <li>
-            Addition: Adding new objects within the images.
-          </li>
-          <li>
-          Remove: Removing objects
-          </li>
-          <li>
-            Local: Replace local parts of an object and later the object's attributes, i.e., make it smile
-          </li>
-          <li>
-          Global: Edit the entire image, i.e., let's see it in winter
-          </li>
-          <li>
-            Inpaint: Alter an object's visual appearance without affecting its structure
-          </li>
-            <li>
-          Background: Change the scene's background
-          </li>
-        </ol>
+        Please use videos from this <TBA>. Run your auto evaluation method on this set of videos and submit the auto evaluation results or ranking
       </p>
+
+      <H5>Track B.2 -  Image Generation Auto Eval </H5>
+
+      <p>
+        Please use images from this <TBA>. Run your auto evaluation method on this set of videos and submit the auto evaluation results or ranking
+      </p>
+
 
       <H5>Evaluation Protocol</H5>
 
+
       <p>
-        We leverage both human and automated evaluations. On human-based evaluations, we use human annotators to annotate the we mainly evaluate the following aspects:
-      <ol>
-      <li>Edit faithfulness - whether the edited image follows the editing instruction</li>
-      <li>Content preservation - whether the edited image preserves the regions of the original image which should not be changed</li>
-      <li>Visual quality - whether the edited image is artifact-free, keeping the core visual features of the original image, etc</li>
-      </ol>
+        All submitted video/images will be uploaded to our crowdsourcing platform for public voting. The top three submissions with the highest votes for each topic will be declared winners. Beyond the winners per topic, we also have joint submission winners where we would have the best overall performing solution. We would use the Elo ranking system to compute the final ranking between different models.
       </p>
 
       <p>
-      On automatic evaluation, similar to the text to image track, we will leverage existing methods that have developed automatic metrics to help in assessing the outputs of the image based on the prompt and instruction.
+        On automatic evaluation, we will leverage existing methods that have developed automatic
+        metrics to help in assessing the outputs of the image based on the prompt.
       </p>
-
 
       <p>
-      To determine winners, we use automatic evaluation to help prune the total number entries to 10 finalists. At 10, we would use human annotation and evaluation to determine the final winners.
+        For the voting setup, we would use a pairwise comparison setup, showing two videos or images along with the topic, and ask the question "Which one would you prefer?". The selections would be 3-scale win/tie/lose rating.
       </p>
 
-     <H4>Bonus Track - Movie Generation Challenge</H4>
-        <p> The generated movie can be any video or topic, but should be created with generative AI solution. The movie should be no more than 5 minutes long.
-          To submit to the bonus track, please use the link here: [<a href="https://forms.gle/7ftma45oDCynqvSz6">Moviegen Challenge Submission</a>]
-          </p>
-
-       -->
-      <p><br /></p>
-
-
-      <H3>Winner Prize</H3>
-    <p>
-      Top three contestants of each track will be awarded with the latest generation of AR/VR headsets from Meta.
-    </p>
 
     <p><br /></p>
 
@@ -295,11 +276,8 @@
     <h2>Challenge Registration / Submission </h2>
 
     <h3> Mailing List Registration</h3>
-    <p> For all parties interested in participating, we ask you to sign up to our mailing list throught the google form here: [<a href="https://docs.google.com/forms/d/e/1FAIpQLSeA4MOy5QdQiPqGrWMiJg0NNZRSwG8FSs1emCvYPFCBFHq2gg/viewform?usp=sf_link">Register Mailing List</a>].
+    <p> For all parties interested in participating, we ask you to sign up to our mailing list throught the google form here: TBD.</p>
 
-      </p>
-
-      <p><br /></p>
       <h3>Submission Instructions</h3>
       Submission instructions have been sent out to participants via email. Please register above to receive instructions on the mailing list above.
 
@@ -348,35 +326,39 @@ TBD -->
 </div>
 <div class="row">
   <div class="col-xs-12">
-    TBA
-    <!--
    <table class="table table-striped">
       <tbody>
         <tr>
-          <td>Registration Open</td>
-          <td>March 4</td>
+          <td>Description</td>
+          <td>Date</td>
         </tr>
         <tr>
-          <td>Release of Benchmarking Datasets</td>
-          <td><s>March 22</s> April 5</td>
+          <td>Submission opens for all Challenges.</td>
+          <td>3/3/2025</td>
         </tr>
         <tr>
-          <td>Challenge Submission Deadline</td>
-          <td><s> April 26, 5pm PST</s> May 1st, 11:59pm PST</td>
+          <td>Submission closes for Challenge A.</td>
+          <td>4/14/2025</td>
         </tr>
         <tr>
-          <td>Announcement of Challenge Winners</td>
-          <td><s>May 18 </s> May 25</td>
+          <td>Crowd-sourced polling opens</td>
+          <td>4/21/2025</td>
+        </tr>
+        <tr>
+          <td>Submission closes for Challenge B.</td>
+          <td>6/2/2025</td>
+        </tr>
+        <tr>
+          <td>Crowd-sourced poll ends.</td>
+          <td>6/2/2025</td>
         </tr>
         <tr>
           <td>Workshop Date</td>
-          <td>June 17 </td>
+          <td>TBD </td>
         </tr>
 
       </tbody>
     </table>
-
-    -->
 
   </div>
 </div>
@@ -472,14 +454,11 @@ TBD -->
 
 <p><br /></p>
 
-
-
 <div class="row" id="speakers">
   <div class="col-xs-12">
     <h2>Invited Speakers</h2>
   </div>
 </div>
-
 
 <div class="row">
   <div class="col-md-2">
@@ -543,7 +522,6 @@ TBD -->
 
 
 </div>
-<p><br /></p>
 <!---
 
 <div class="row">
@@ -591,8 +569,7 @@ TBD -->
 -->
 
 
-
-
+<p><br /></p>
 <div class="row" id="organizers">
   <div class="col-xs-12">
     <h2>Organizers</h2>
@@ -797,6 +774,16 @@ TBD -->
     </div>
   </div>
 
+
+  <div class="col-xs-2">
+    <a href="https://www.alithabet.com/">
+      <img class="people-pic" src="static/img/people/ali_thabet.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://www.alithabet.com/">Ali Thabet</a>
+      <h6>Meta AI</h6>
+    </div>
+  </div>
 
   <div class="col-xs-2">
     <a href="https://ai.meta.com/people/roshan-sumbaly/">
