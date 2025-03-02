@@ -1,0 +1,1 @@
+A canvas waiting for brushstrokes, representing artistic expression
