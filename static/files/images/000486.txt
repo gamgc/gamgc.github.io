@@ -1,1 +1,0 @@
-A building block being added to a structure, representing progress

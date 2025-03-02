@@ -1,1 +1,0 @@
-A fitness trainer working with a client to create a personalized workout plan

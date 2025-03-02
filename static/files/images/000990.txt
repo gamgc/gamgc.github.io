@@ -1,1 +1,0 @@
-A movie review with critic's opinion and rating
