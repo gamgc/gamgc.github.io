@@ -38,8 +38,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
 
-  <style>
 
+  <style>
+    .highlight-link {
+        background-color: yellow;
+        text-decoration: underline;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
     .people-pic {
       max-width: 139px;
       max-height: 139px;
@@ -278,15 +284,15 @@
 
     In this challenge, we will use provided (text, image) pairs and (text, video) pairs for which participants would run their own auto evaluation metrics on. Participants will submit scores of these media which can be used to rank different media, or simply provide a ranking of all the videos in their submission.
 
-      <H5>Track B.1 -  Video Generation Auto Eval </H5>
+      <H5>Track B.1 - Video Generation Auto Eval </H5>
       <p>
-       For this track, we use <a href="https://github.com/facebookresearch/MovieGenBench?tab=readme-ov-file#movie-gen-video-bench">Movie Gen Video Bench</a> for benchmarking. Each participant will be asked to download the 1000 videos and prompts from Movie Gen Video Bench and run their auto eval models to get a ranking of the 1000 videos.
+       For this track, we use Movie Gen Video Bench for benchmarking. Each participant will be asked to download the 1000 videos and prompts from Movie Gen Video Bench and run their auto eval models to get a ranking of the 1000 videos.
       </p>
 
-      <H5>Track B.2 -  Image Generation Auto Eval </H5>
+      <H5>Track B.2 - Image Generation Auto Eval </H5>
 
       <p>
-        For this track, we use <a href="">Movie Gen Video Bench</a> for benchmarking. Each participant will be asked to download the 1000 videos and prompts from Movie Gen Video Bench and run their auto eval models to get a ranking of the 1000 videos.
+        For this track, we use Emu_1k for benchmarking. Each participant can download the 1000 emu-generated images and prompts from the benchmark and run their auto eval models to get a ranking of the 1000 images.
       </p>
 
 
@@ -307,7 +313,66 @@
       </p>
 
       <H5 id="challenge_b_instruction">Submission Instruction</H5>
-      TBA
+      <p>
+          To participate in Track B.1, please follow these steps:
+      </p>
+      <ol>
+          <li>
+              Download the 1003 videos, indexed from 0 to 1002, from the
+              <a href="https://github.com/facebookresearch/MovieGenBench?tab=readme-ov-file#movie-gen-video-bench" target="_blank" class="highlight-link">Movie Gen Video Bench</a>.
+          </li>
+          <li>
+              Run your auto-evaluation model to generate the rankings for these videos. You can also utilize the prompts and meta information provided in the Movie Gen Video Generation benchmark to enhance your evaluation.
+          </li>
+          <li>
+              To submit your results, prepare a text file with 1003 lines. Each line should represent the ranking of the corresponding video, starting with the first video, "0.mp4".
+          </li>
+      </ol>
+
+      Example of a submitted txt file.
+      <pre>
+217
+0
+...
+115
+      </pre>
+      In this submission,
+      <ul>
+        <li>The first video (<code>0.mp4</code>) ranks 218th, so the first line is <code>217</code>.</li>
+        <li>The second video (<code>1.mp4</code>) ranks 1st, so the second line is <code>0</code>.</li>
+        <li>The last video (<code>1002.mp4</code>) ranks 116th, so the last line is <code>115</code>.</li>
+    </ul>
+<p><br /></p>
+
+      <p>
+          For Track B.2, please follow these instructions:
+      </p>
+      <ol>
+          <li>
+              Download the "images.zip" file from the
+              <a href="https://huggingface.co/datasets/jhou90/GenAI_Emu_1k/tree/main" target="_blank" class="highlight-link">Emu 1k benchmark</a>.
+          </li>
+          <li>
+              Inside "images.zip", you will find 1000 images along with their corresponding prompts. For example, "000000.jpg" has its prompts in "000000.txt".
+          </li>
+          <li>
+              To submit your results, create a text file with 1000 lines. Each line should indicate the ranking (starts with 0) of the corresponding image, starting with "000000.jpg".
+          </li>
+      </ol>
+
+      Example of a submitted txt file.
+      <pre>
+217
+0
+...
+115
+      </pre>
+      In this submission,
+      <ul>
+        <li>The first image (<code>000000.jpg</code>) ranks 218th, so the first line is <code>217</code>.</li>
+        <li>The second image (<code>000001.jpg</code>) ranks 1st, so the second line is <code>0</code>.</li>
+        <li>The last image (<code>000999.jpg</code>) ranks 116th, so the last line is <code>115</code>.</li>
+    </ul>
 
 
 <p><br /></p>
@@ -602,6 +667,17 @@ TBD -->
 
 <div class="row">
 
+
+  <div class="col-xs-2">
+    <a href="https://sekunde.github.io">
+      <img class="people-pic" src="static/img/people/ji_hou.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="https://sekunde.github.io/">Ji Hou</a>
+      <h6>Meta AI</h6>
+    </div>
+  </div>
+
  <div class="col-xs-2">
     <a href="https://scholar.google.com/citations?user=JdE_LFYAAAAJ&hl=en">
       <img class="people-pic" src="static/img/people/sam_tsai.jpg" />
@@ -613,11 +689,11 @@ TBD -->
   </div>
 
   <div class="col-xs-2">
-    <a href="https://sekunde.github.io">
-      <img class="people-pic" src="static/img/people/ji_hou.jpg" />
+    <a href="https://www.linkedin.com/in/ajay-menon-022650267">
+      <img class="people-pic" src="static/img/people/yaqiao_luo.jpg" />
     </a>
     <div class="people-name">
-      <a href="https://sekunde.github.io/">Ji Hou</a>
+      <a href="https://www.linkedin.com/in/ajay-menon-022650267">Yaqiao Luo</a>
       <h6>Meta AI</h6>
     </div>
   </div>
@@ -633,16 +709,17 @@ TBD -->
     </div>
   </div>
 
-
   <div class="col-xs-2">
     <a href="https://www.linkedin.com/in/ajay-menon-022650267">
-      <img class="people-pic" src="static/img/people/yaqiao_luo.jpg" />
+      <img class="people-pic" src="static/img/people/maxime.jpg" />
     </a>
     <div class="people-name">
-      <a href="https://www.linkedin.com/in/ajay-menon-022650267">Yaqiao Luo</a>
+      <a href="https://www.linkedin.com/in/ajay-menon-022650267">Maxime Seknadje</a>
       <h6>Meta AI</h6>
     </div>
   </div>
+
+
 
   <div class="col-xs-2">
     <a href="https://kunpengli1994.github.io/">
@@ -705,15 +782,7 @@ TBD -->
     </div>
   </div>
 
-  <div class="col-xs-2">
-    <a href="https://www.linkedin.com/in/ajay-menon-022650267">
-      <img class="people-pic" src="static/img/people/maxime.jpg" />
-    </a>
-    <div class="people-name">
-      <a href="https://www.linkedin.com/in/ajay-menon-022650267">Maxime Seknadje</a>
-      <h6>Meta AI</h6>
-    </div>
-  </div>
+
 
   <div class="col-xs-2">
     <a href="https://sites.google.com/view/taoxu">
